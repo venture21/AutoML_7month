@@ -32,3 +32,13 @@
 
 gcloud run deploy yolo-object-detector --source . --platform managed --region us-central1 --allow-unauthenticated 
 
+
+1. Cloud run의 배포 -> 삭제
+2. AutoML 삭제 포인트
+   2.1 데이터셋, 버킷(cloud storage)
+   2.2 학습 (모델) 
+   2.3 모델 레지스트리
+   2.4 배포(엔드 포인트)
+
+
+
