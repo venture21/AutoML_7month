@@ -1,0 +1,34 @@
+  Cloud Run 배포 과정
+
+   1. Google Cloud SDK 설치 및 초기화: Cloud Run에 배포하려면 Google Cloud
+      SDK가 필요합니다. Google Cloud SDK 문서
+      (https://cloud.google.com/sdk/docs/install)를 참조하여 설치하고
+      초기화합니다.
+
+   2. gcloud 인증: 다음 명령어를 실행하여 gcloud에 로그인합니다.
+
+
+   1     gcloud auth login
+
+
+   3. 프로젝트 설정: 다음 명령어를 실행하여 사용할 Google Cloud 프로젝트를
+      설정합니다.
+
+
+
+   1     gcloud config set project [YOUR_PROJECT_ID]
+
+
+   4. Cloud Build 활성화: Cloud Build API를 활성화해야 합니다. Google
+      Cloud Console에서 또는 다음 명령어를 사용하여 활성화할 수 있습니다.
+
+
+   1     gcloud services enable cloudbuild.googleapis.com
+
+
+
+   5. Cloud Run에 배포: 다음 명령어를 사용하여 애플리케이션을 Cloud Run에
+      배포합니다.
+
+gcloud run deploy yolo-object-detector --source . --platform managed --region us-central1 --allow-unauthenticated 
+
